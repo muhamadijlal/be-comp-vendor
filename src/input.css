@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+:root {
+--dark-color: #1f453f;
+--primary-color: #0e4840;
+--secondary-color: #3d6862;
+--light-color: #dceb9d;
+}
+
+* {
+    font-family: 'Montserrat';
+    /* border: 1px solid white; */
+}

@@ -4,10 +4,155 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./src/output.css" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+  </style>
 </head>
-<body>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+<body class="bg-[var(--primary-color)] px-5 pb-5">
+  <!-- <nav class="py-2 mb-3 flex items-center justify-between relative z-10 bg-[var(--primary-color)]">
+    <h3 class="font-bold text-lg text-white">Sumitomo</h3>
+    
+    <button class="p-0 hover:cursor-pointer">
+      <i class='bx bx-menu text-3xl' style='color:#ffffff'></i>
+    </button>
+
+    <div class="bg-white absolute w-full -z-5 top-10">
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+  </nav> -->
+
+  <section class="relative rounded-2xl overflow-hidden mt-10">
+    <img src="./src/assets/sample.jpg" alt="Background Image" class="w-full h-[650px] object-cover">
+    
+    <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 20%, rgba(0, 0, 0, 0) 100%);"></div>
+    
+    <div class="absolute z-20 left-5 top-[25%]">
+      <h3 class="text-white font-bold text-6xl">
+        Happiness Grows from Trees
+      </h3>
+      <p class="text-white text-xl font-light">Utilizing Wood as a Healthy and Environmentally Friendly Natural Resource</p>
+    </div>
+
+    <div class="absolute bottom-10 w-full px-10 text-center animate-bounce">
+      <a href="#" class="px-2 py-3 rounded-full border border-white">
+        <i class='bx bx-arrow-back bx-rotate-270' style='color:#ffffff' ></i>
+      </a>
+    </div>
+  </section>
+
+  <div class="h-28"></div>
+
+  <section>
+    <div class="mb-10 flex items-center gap-4">
+      <h4 class="text-4xl font-semibold text-[var(--light-color)]">
+        About Us
+      </h4>
+      <hr class="w-full border border-[var(--light-color)]"/>
+    </div>
+
+    <div class="grid grid-cols-2 gap-5 justify-items-center">
+      <div class="w-full rounded-xl p-5 bg-[var(--secondary-color)] flex items-center flex-col justify-center">
+        <div class="text-left">
+          <p class="text-[var(--light-color)] text-2xl font-semibold">Projects we carry out</p>
+          <h4 class="text-8xl font-semibold text-white">
+            240
+          </h4>
+          <span class="text-md text-white font-semibold">Unit</span>
+        </div>
+      </div>
+
+      <div class="w-full rounded-xl p-5 bg-[var(--light-color)] flex items-center flex-col justify-center">
+        <div class="text-left">
+          <p class="text-[var(--primary-color)] text-2xl font-semibold">Factories</p>
+          <h4 class="text-8xl font-semibold text-[var(--primary-color)]">
+            4
+          </h4>
+          <span class="text-md text-[var(--primary-color)] font-semibold">Locations</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-10 space-y-5">
+      <h6 class="font-bold text-[var(--light-color)] text-4xl">Since our founding more than 330 years ago</h6>
+
+      <p class="text-lg font-base text-justify text-white">We have accumulated technical expertise and know how related to wood, cultivated relationships with our customers, developed an extensive network of business partners both in Japan and abroad, and built our brand. With these unique strengths and through a diverse range of lifestyle-related services, we are committed to contributing to a sustainable and prosperous society.</p>
+
+      <div class="w-full text-end">
+        <a href="#" class="px-4 text-end py-2 rounded-full border border-[var(--light-color)] text-[var(--light-color)] hover:text-[var(--primary-color)] hover:bg-[var(--light-color)] font-bold">Read More
+          <i class='bx bx-arrow-back rotate-140' ></i>
+        </a>
+      </div>
+    </div>
+  </section>
+  <div class="h-28"></div>
+  <section>
+    <div class="mb-10 flex items-center gap-4">
+      <h4 class="text-4xl font-semibold text-[var(--light-color)]">
+        Business Line Trading
+      </h4>
+      <hr class="w-full border border-[var(--light-color)]"/>
+    </div>
+
+    <div class="grid grid-cols-2 grid-rows-2 gap-4">
+      <a href="#" class="bg-red-100 aspect-[4/6] rounded-lg row-span-2 bg-cover overflow-hidden relative group" style="background-image: url('./src/assets/plywood.jpg');">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div class="absolute bottom-0 left-0 right-0 px-4 py-2 text-white font-bold opacity-0 transform translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 group-hover:underline transition-all duration-500">
+          Plywood
+          <i class='bx bx-arrow-back rotate-140'></i>
+        </div>
+      </a>
+      
+      <a href="#" class="bg-red-100 rounded-lg bg-cover overflow-hidden relative group" style="background-image: url('./src/assets/mfc.jpg');">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div class="absolute bottom-0 left-0 right-0 px-4 py-2 text-white font-bold opacity-0 transform translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 group-hover:underline transition-all duration-500">
+          Mfc
+          <i class='bx bx-arrow-back rotate-140'></i>
+        </div>
+      </a>
+      
+      <a href="#" class="bg-red-100 aspect-[4/4] rounded-lg bg-cover overflow-hidden relative group" style="background-image: url('./src/assets/gypsum.jpg');">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div class="absolute bottom-0 left-0 right-0 px-4 py-2 text-white font-bold opacity-0 transform translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 group-hover:underline transition-all duration-500">
+          Gypsum
+          <i class='bx bx-arrow-back rotate-140'></i>
+        </div>
+      </a>
+      
+      <a href="#" class="bg-red-100 aspect-[4/6] rounded-lg row-span-3 col-start-2 row-start-2 bg-cover overflow-hidden relative group" style="background-image: url('./src/assets/wall.jpg');">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div class="absolute bottom-0 left-0 right-0 px-4 py-2 text-white font-bold opacity-0 transform translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 group-hover:underline transition-all duration-500">
+          Wall
+          <i class='bx bx-arrow-back rotate-140'></i>
+        </div>
+      </a>
+      
+      <a href="#" class="bg-red-100 aspect-[4/3] rounded-lg row-span-2 col-start-1 row-start-3 bg-cover overflow-hidden relative group" style="background-image: url('./src/assets/gypsum.jpg');">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div class="absolute bottom-0 left-0 right-0 px-4 py-2 text-white font-bold opacity-0 transform translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 group-hover:underline transition-all duration-500">
+          Gypsum
+          <i class='bx bx-arrow-back rotate-140'></i>
+        </div>
+      </a>
+      
+      <a href="#" class="bg-red-100 aspect-[4/3] rounded-lg row-span-2 col-start-1 row-start-3 bg-cover overflow-hidden relative group" style="background-image: url('./src/assets/sample2.jpg');">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div class="absolute bottom-0 left-0 right-0 px-4 py-2 text-white font-bold opacity-0 transform translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 group-hover:underline transition-all duration-500">
+          Sample
+          <i class='bx bx-arrow-back rotate-140'></i>
+        </div>
+      </a>      
+      
+      <div class="w-full text-end flex justify-end items-end">
+        <a href="#" class="px-4 text-end py-2 rounded-full border border-[var(--light-color)] text-[var(--light-color)] hover:text-[var(--primary-color)] hover:bg-[var(--light-color)] font-bold">Show more
+          <i class='bx bx-arrow-back rotate-140'></i>
+        </a>
+      </div>
+    </div>
+  </section> 
 </body>
 </html>
