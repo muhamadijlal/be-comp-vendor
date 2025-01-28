@@ -11,3 +11,99 @@
     font-family: 'Montserrat';
     /* border: 1px solid white; */
 }
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.navbar li {
+    color: white;
+    font-size: 18px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+}
+
+.navbar .menu-icon {
+    display: none;
+    font-size: 30px;
+    color: white;
+}
+
+  /* Mobile view */
+@media screen and (max-width: 768px) {
+    .navbar ul {
+      display: none;
+      flex-direction: column;
+      background-color: var(--primary-color);
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+    }
+
+    .navbar.active ul {
+      display: flex;
+    }
+
+    .navbar .menu-icon {
+      display: block;
+    }
+
+    .navbar li {
+      text-align: center;
+      width: 100%;
+      padding: 10px 0;
+    }
+
+    .navbar li:hover {
+      background-color: var(--light-color);
+    }
+}
+
+@keyframes infinite-scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes infinite-scroll-inverse {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.relative {
+    overflow: hidden; /* Hide the overflowing part of the scroll */
+}
+
+.animate-infinite-scroll {
+    display: flex;
+    animation: infinite-scroll 25s linear infinite; /* Adjust speed here */
+}
+
+.animate-infinite-scroll-inverse {
+    display: flex;
+    animation: infinite-scroll-inverse 25s linear infinite; /* Adjust speed here */
+}

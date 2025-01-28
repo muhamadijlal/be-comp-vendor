@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,151 +8,378 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
   </style>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
 </head>
-<body class="bg-[var(--primary-color)] px-5 pb-5">
-  <!-- <nav class="py-2 mb-3 flex items-center justify-between relative z-10 bg-[var(--primary-color)]">
-    <h3 class="font-bold text-lg text-white">Sumitomo</h3>
+<body class="bg-[var(--primary-color)]">
+    <header x-data="{ open: false }" class="navbar">
+        <div class="flex justify-between items-center">
+          <!-- Logo/Brand -->
+          <a href="#" class="text-white font-bold text-2xl">Forestry</a>
     
-    <button class="p-0 hover:cursor-pointer">
-      <i class='bx bx-menu text-3xl' style='color:#ffffff'></i>
-    </button>
-
-    <div class="bg-white absolute w-full -z-5 top-10">
-      <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
-      </ul>
-    </div>
-  </nav> -->
-
-  <section class="relative rounded-2xl overflow-hidden mt-10">
-    <img src="./src/assets/sample.jpg" alt="Background Image" class="w-full h-[650px] object-cover">
+          <!-- Menu Icon for mobile -->
+          <div @click="open = !open" class="menu-icon">
+            <i class='bx bx-menu'></i>
+          </div>
     
-    <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 20%, rgba(0, 0, 0, 0) 100%);"></div>
-    
-    <div class="absolute z-20 left-5 top-[25%]">
-      <h3 class="text-white font-bold text-6xl">
-        Happiness Grows from Trees
-      </h3>
-      <p class="text-white text-xl font-light">Utilizing Wood as a Healthy and Environmentally Friendly Natural Resource</p>
-    </div>
-
-    <div class="absolute bottom-10 w-full px-10 text-center animate-bounce">
-      <a href="#" class="px-2 py-3 rounded-full border border-white">
-        <i class='bx bx-arrow-back bx-rotate-270' style='color:#ffffff' ></i>
-      </a>
-    </div>
-  </section>
-
-  <div class="h-28"></div>
-
-  <section>
-    <div class="mb-10 flex items-center gap-4">
-      <h4 class="text-4xl font-semibold text-[var(--light-color)]">
-        About Us
-      </h4>
-      <hr class="w-full border border-[var(--light-color)]"/>
-    </div>
-
-    <div class="grid grid-cols-2 gap-5 justify-items-center">
-      <div class="w-full rounded-xl p-5 bg-[var(--secondary-color)] flex items-center flex-col justify-center">
-        <div class="text-left">
-          <p class="text-[var(--light-color)] text-2xl font-semibold">Projects we carry out</p>
-          <h4 class="text-8xl font-semibold text-white">
-            240
-          </h4>
-          <span class="text-md text-white font-semibold">Unit</span>
+          <!-- Menu Links -->
+          <ul :class="{'block': open, 'hidden': !open}" class="md:flex gap-6">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#trading">Trading</a></li>
+            <li><a href="#property">Property</a></li>
+            <li><a href="#partners">Partners</a></li>
+          </ul>
         </div>
-      </div>
+    </header>
 
-      <div class="w-full rounded-xl p-5 bg-[var(--light-color)] flex items-center flex-col justify-center">
-        <div class="text-left">
-          <p class="text-[var(--primary-color)] text-2xl font-semibold">Factories</p>
-          <h4 class="text-8xl font-semibold text-[var(--primary-color)]">
-            4
-          </h4>
-          <span class="text-md text-[var(--primary-color)] font-semibold">Locations</span>
+    <section class="relative rounded-2xl overflow-hidden lg:rounded-none" id="home">
+        <video muted loop autoplay width="100%" height="100%">
+            <source src="./src/assets/herovid.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+        
+        <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 20%, rgba(0, 0, 0, 0) 100%);"></div>
+        
+        <div class="absolute z-20 p-5 top-[25%] space-y-10">
+        <h3 class="text-white font-bold text-5xl md:text-6xl lg:text-8xl">
+            Happiness Grows from Trees
+        </h3>
+        <p class="text-white text-base md:text-xl font-light lg:text-3xl">Utilizing Wood as a Healthy and Environmentally Friendly Natural Resource</p>
         </div>
-      </div>
-    </div>
 
-    <div class="mt-10 space-y-5">
-      <h6 class="font-bold text-[var(--light-color)] text-4xl">Since our founding more than 330 years ago</h6>
+        <div class="absolute bottom-10 w-full px-10 text-center animate-bounce">
+            <a href="#" class="px-2 py-3 rounded-full border border-white">
+                <i class='bx bx-arrow-back bx-rotate-270' style='color:#ffffff' ></i>
+            </a>
+        </div>
+    </section>
 
-      <p class="text-lg font-base text-justify text-white">We have accumulated technical expertise and know how related to wood, cultivated relationships with our customers, developed an extensive network of business partners both in Japan and abroad, and built our brand. With these unique strengths and through a diverse range of lifestyle-related services, we are committed to contributing to a sustainable and prosperous society.</p>
+    <div class="h-28" id="about"></div>
 
-      <div class="w-full text-end">
-        <a href="#" class="px-4 text-end py-2 rounded-full border border-[var(--light-color)] text-[var(--light-color)] hover:text-[var(--primary-color)] hover:bg-[var(--light-color)] font-bold">Read More
-          <i class='bx bx-arrow-back rotate-140' ></i>
+    <section class="px-5 container mx-auto" id="about">
+        <div class="mb-10 flex items-center gap-4">
+            <h4 class="text-4xl md:text-6xl lg:text-7xl font-semibold text-[var(--light-color)]">
+                About Us
+            </h4>
+            <hr class="w-full border border-[var(--light-color)]"/>
+        </div>
+
+        <div class="grid md:grid-cols-2 grid-cols-1 gap-5">
+            <div class="grid grid-cols-2 md:grid-cols-1 gap-5 justify-items-center">
+                <div class="w-full max-w-xs rounded-xl p-5 bg-[var(--secondary-color)] flex items-left flex-col justify-center">
+                    <div class="text-left space-y-3">
+                        <p class="text-[var(--light-color)] text-base font-semibold">Projects we carry out</p>
+                        <h4 class="text-6xl font-semibold text-white">240</h4>
+                        <span class="text-sm text-white font-semibold">Unit</span>
+                    </div>
+                </div>
+        
+                <div class="w-full max-w-xs rounded-xl p-5 bg-[var(--light-color)] flex items-left flex-col justify-center">
+                    <div class="text-left space-y-3">
+                        <p class="text-[var(--primary-color)] text-base font-semibold">Factories</p>
+                        <h4 class="text-6xl text-[var(--primary-color)] font-semibold">4</h4>
+                        <span class="text-sm font-semibold text-[var(--primary-color)]">Locations</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="mt-10 md:mt-0 space-y-5">
+                <h6 class="font-bold text-[var(--light-color)] text-2xl lg:text-4xl">Since our founding more than 330 years ago</h6>
+        
+                <p class="text-base font-base text-justify text-white lg:text-xl">We have accumulated technical expertise and know how related to wood, cultivated relationships with our customers, developed an extensive network of business partners both in Japan and abroad, and built our brand. With these unique strengths and through a diverse range of lifestyle-related services, we are committed to contributing to a sustainable and prosperous society.</p>
+        
+                <div class="w-full text-end">
+                    <a href="#" class="px-4 text-end py-2 rounded-full border border-[var(--light-color)] text-[var(--light-color)] hover:text-[var(--primary-color)] hover:bg-[var(--light-color)] text-sm font-bold lg:text-xl">Read More
+                    <i class='bx bx-arrow-back rotate-140' ></i>
+                    </a>
+                </div>
+            </div>
+        </div>        
+    </section>
+
+    <div class="h-28" id="trading"></div>
+
+    <section class="px-5 py-10 bg-[var(--light-color)] container mx-auto" id="trading">
+        <div class="mb-10 flex items-center gap-4">
+            <h4 class="text-4xl md:text-6xl lg:text-7xl font-semibold text-[var(--primary-color)]">
+                Business Line Trading
+            </h4>
+            <hr class="w-full border border-[var(--primary-color)]"/>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 md:grid-rows-3 grid-rows-2 gap-4">
+        <a href="#" class="bg-red-100 aspect-[4/6] rounded-lg row-span-2 bg-cover overflow-hidden relative group" style="background-image: url('./src/assets/plywood.jpg');">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="absolute bottom-0 left-0 right-0 px-4 py-2 text-white font-bold opacity-0 transform translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 group-hover:underline transition-all duration-500">
+            Plywood
+            <i class='bx bx-arrow-back rotate-140'></i>
+            </div>
         </a>
-      </div>
-    </div>
-  </section>
-  <div class="h-28"></div>
-  <section>
-    <div class="mb-10 flex items-center gap-4">
-      <h4 class="text-4xl font-semibold text-[var(--light-color)]">
-        Business Line Trading
-      </h4>
-      <hr class="w-full border border-[var(--light-color)]"/>
-    </div>
-
-    <div class="grid grid-cols-2 grid-rows-2 gap-4">
-      <a href="#" class="bg-red-100 aspect-[4/6] rounded-lg row-span-2 bg-cover overflow-hidden relative group" style="background-image: url('./src/assets/plywood.jpg');">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-        <div class="absolute bottom-0 left-0 right-0 px-4 py-2 text-white font-bold opacity-0 transform translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 group-hover:underline transition-all duration-500">
-          Plywood
-          <i class='bx bx-arrow-back rotate-140'></i>
-        </div>
-      </a>
-      
-      <a href="#" class="bg-red-100 rounded-lg bg-cover overflow-hidden relative group" style="background-image: url('./src/assets/mfc.jpg');">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-        <div class="absolute bottom-0 left-0 right-0 px-4 py-2 text-white font-bold opacity-0 transform translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 group-hover:underline transition-all duration-500">
-          Mfc
-          <i class='bx bx-arrow-back rotate-140'></i>
-        </div>
-      </a>
-      
-      <a href="#" class="bg-red-100 aspect-[4/4] rounded-lg bg-cover overflow-hidden relative group" style="background-image: url('./src/assets/gypsum.jpg');">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-        <div class="absolute bottom-0 left-0 right-0 px-4 py-2 text-white font-bold opacity-0 transform translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 group-hover:underline transition-all duration-500">
-          Gypsum
-          <i class='bx bx-arrow-back rotate-140'></i>
-        </div>
-      </a>
-      
-      <a href="#" class="bg-red-100 aspect-[4/6] rounded-lg row-span-3 col-start-2 row-start-2 bg-cover overflow-hidden relative group" style="background-image: url('./src/assets/wall.jpg');">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-        <div class="absolute bottom-0 left-0 right-0 px-4 py-2 text-white font-bold opacity-0 transform translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 group-hover:underline transition-all duration-500">
-          Wall
-          <i class='bx bx-arrow-back rotate-140'></i>
-        </div>
-      </a>
-      
-      <a href="#" class="bg-red-100 aspect-[4/3] rounded-lg row-span-2 col-start-1 row-start-3 bg-cover overflow-hidden relative group" style="background-image: url('./src/assets/gypsum.jpg');">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-        <div class="absolute bottom-0 left-0 right-0 px-4 py-2 text-white font-bold opacity-0 transform translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 group-hover:underline transition-all duration-500">
-          Gypsum
-          <i class='bx bx-arrow-back rotate-140'></i>
-        </div>
-      </a>
-      
-      <a href="#" class="bg-red-100 aspect-[4/3] rounded-lg row-span-2 col-start-1 row-start-3 bg-cover overflow-hidden relative group" style="background-image: url('./src/assets/sample2.jpg');">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-        <div class="absolute bottom-0 left-0 right-0 px-4 py-2 text-white font-bold opacity-0 transform translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 group-hover:underline transition-all duration-500">
-          Sample
-          <i class='bx bx-arrow-back rotate-140'></i>
-        </div>
-      </a>      
-      
-      <div class="w-full text-end flex justify-end items-end">
-        <a href="#" class="px-4 text-end py-2 rounded-full border border-[var(--light-color)] text-[var(--light-color)] hover:text-[var(--primary-color)] hover:bg-[var(--light-color)] font-bold">Show more
-          <i class='bx bx-arrow-back rotate-140'></i>
+        
+        <a href="#" class="bg-red-100 rounded-lg bg-cover overflow-hidden relative group" style="background-image: url('./src/assets/mfc.jpg');">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="absolute bottom-0 left-0 right-0 px-4 py-2 text-white font-bold opacity-0 transform translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 group-hover:underline transition-all duration-500">
+            Mfc
+            <i class='bx bx-arrow-back rotate-140'></i>
+            </div>
         </a>
+        
+        <a href="#" class="bg-red-100 aspect-[4/4] rounded-lg bg-cover overflow-hidden relative group" style="background-image: url('./src/assets/gypsum.jpg');">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="absolute bottom-0 left-0 right-0 px-4 py-2 text-white font-bold opacity-0 transform translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 group-hover:underline transition-all duration-500">
+            Gypsum
+            <i class='bx bx-arrow-back rotate-140'></i>
+            </div>
+        </a>
+        
+        <a href="#" class="bg-red-100 aspect-[4/6] rounded-lg row-span-3 col-start-2 row-start-2 bg-cover overflow-hidden relative group" style="background-image: url('./src/assets/wall.jpg');">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="absolute bottom-0 left-0 right-0 px-4 py-2 text-white font-bold opacity-0 transform translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 group-hover:underline transition-all duration-500">
+            Wall
+            <i class='bx bx-arrow-back rotate-140'></i>
+            </div>
+        </a>
+        
+        <a href="#" class="bg-red-100 aspect-[4/3] rounded-lg row-span-2 col-start-1 row-start-3 bg-cover overflow-hidden relative group" style="background-image: url('./src/assets/gypsum.jpg');">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="absolute bottom-0 left-0 right-0 px-4 py-2 text-white font-bold opacity-0 transform translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 group-hover:underline transition-all duration-500">
+            Gypsum
+            <i class='bx bx-arrow-back rotate-140'></i>
+            </div>
+        </a>
+        
+        <a href="#" class="bg-red-100 aspect-[4/3] rounded-lg row-span-2 col-start-1 row-start-3 bg-cover overflow-hidden relative group" style="background-image: url('./src/assets/sample2.jpg');">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="absolute bottom-0 left-0 right-0 px-4 py-2 text-white font-bold opacity-0 transform translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 group-hover:underline transition-all duration-500">
+            Sample
+            <i class='bx bx-arrow-back rotate-140'></i>
+            </div>
+        </a>      
+        
+        <div class="w-full text-end flex justify-end items-end">
+            <a href="#" class="px-4 text-end py-2 rounded-full border border-[var(--primary-color)] text-[var(--primary-color)] hover:text-[var(--light-color)] hover:bg-[var(--primary-color)] text-sm font-bold lg:text-xl">Show more
+                <i class='bx bx-arrow-back rotate-140'></i>
+            </a>
+        </div>
+        </div>
+    </section>
+
+    <div class="h-28" id="property"></div>
+
+    <section class="px-5 container mx-auto" id="property">
+        <div class="mb-10">
+            <div class="flex items-center gap-4">
+                <h4 class="text-4xl lg:text-7xl md:text-6xl font-semibold text-[var(--light-color)]">
+                Business Line
+                </h4>
+                <hr class="w-full border border-[var(--light-color)]"/>
+            </div>
+            <h4 class="text-lg lg:text-2xl font-semibold text-[var(--light-color)]">
+                Housing and Real Estate Business
+            </h4>
+        </div>
+        
+        <div class="grid grid-cols-2 grid-rows-12 gap-4">
+            <div class="row-span-2 bg-white rounded-lg aspect-[4/6] md:aspect-video bg-cover" style="background-image: url('./src/assets/wall.jpg');"></div>
+                <div class="row-span-2 col-start-2 row-start-2 text-white space-y-3">
+                <h4 class="line-clamp-1 text-xl md:text-3xl font-bold lg:text-4xl">Lorem ipsum dolor</h4>
+                <p class="text-sm md:text-lg lg:text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, dolorem. Veniam repellendus eaque accusantium, dolorum distinctio eius, fugit animi ullam accusamus, in eligendi. Qui, eaque?</p>
+            </div>
+            <div class="row-span-2 row-start-4 text-white space-y-3">
+                <h4 class="line-clamp-1 text-xl md:text-3xl font-bold lg:text-4xl">Lorem ipsum dolor</h4>
+                <p class="text-sm text-right md:text-lg lg:text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, dolorem. Veniam repellendus eaque accusantium, dolorum distinctio eius, fugit animi ullam accusamus, in eligendi. Qui, eaque?</p>
+            </div>
+            <div class="row-span-2 col-start-2 row-start-5 bg-white rounded-lg aspect-[4/6] md:aspect-video bg-cover" style="background-image: url('./src/assets/wall.jpg');"></div>
+            <div class="row-span-2 row-start-7 bg-white rounded-lg aspect-[4/6] md:aspect-video bg-cover" style="background-image: url('./src/assets/wall.jpg');"></div>
+            <div class="row-span-2 col-start-2 row-start-8 text-white space-y-3">
+                <h4 class="line-clamp-1 text-xl font-bold md:text-3xl lg:text-4xl">Lorem ipsum dolor</h4>
+                <p class="text-sm md-text-lg lg:text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, dolorem. Veniam repellendus eaque accusantium, dolorum distinctio eius, fugit animi ullam accusamus, in eligendi. Qui, eaque?</p>
+            </div>
+            <div class="row-span-2 row-start-10 text-white space-y-3">
+                <h4 class="line-clamp-1 text-xl font-bold md:text-3xl lg:text-4xl">Lorem ipsum dolor</h4>
+                <p class="text-sm text-right md:text-lg lg:text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, dolorem. Veniam repellendus eaque accusantium, dolorum distinctio eius, fugit animi ullam accusamus, in eligendi. Qui, eaque?</p>
+            </div>
+            <div class="row-span-2 col-start-2 row-start-11 bg-white rounded-lg aspect-[4/6] md:aspect-video bg-cover" style="background-image: url('./src/assets/wall.jpg');"></div>
+        </div>
+    </section>
+
+    <div class="h-28" id="partners"></div>
+
+    <section>
+        <h4 class="text-center text-[var(--light-color)] text-4xl md:text-6xl font-bold mb-20">Our Partners</h4>
+
+        <div class="relative font-inter antialiased">
+            <div class="w-full mx-auto">
+                <div class="text-center">
+                    <div
+                        x-data="{}"
+                        x-init="$nextTick(() => {
+                            let ul = $refs.logos;
+                            ul.insertAdjacentHTML('afterend', ul.outerHTML);
+                            ul.nextSibling.setAttribute('aria-hidden', 'true');
+                        })"
+                        class="w-full inline-flex flex-nowrap overflow-hidden bg-[var(--secondary-color)]"
+                    >
+                        <ul x-ref="logos" class="flex items-center justify-center md:justify-start [&_li]:mx-20 [&_img]:max-w-none animate-infinite-scroll">
+                            <li>
+                                <img src="./src/assets/partner-1.png" alt="partner-1" height="auto"/>
+                            </li>
+                            <li>
+                                <img src="./src/assets/partner-2.png" alt="partner-2" height="auto"/>
+                            </li>
+                            <li>
+                                <img src="./src/assets/partner-3.png" alt="partner-3" height="auto"/>
+                            </li>
+                            <li>
+                                <img src="./src/assets/partner-4.png" alt="partner-4" height="auto"/>
+                            </li>
+                            <li>
+                                <img src="./src/assets/partner-5.png" alt="partner-5" height="auto"/>
+                            </li>
+                        </ul>                
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="relative font-inter antialiased">
+            <div class="w-full mx-auto">
+                <div class="text-center">
+                    <div
+                        x-data="{}"
+                        x-init="$nextTick(() => {
+                            let ul = $refs.logos;
+                            ul.insertAdjacentHTML('afterend', ul.outerHTML);
+                            ul.nextSibling.setAttribute('aria-hidden', 'true');
+                        })"
+                        class="w-full inline-flex flex-nowrap overflow-hidden bg-[var(--secondary-color)]"
+                    >
+                        <ul x-ref="logos" class="flex items-center justify-center md:justify-start [&_li]:mx-20 [&_img]:max-w-none animate-infinite-scroll-inverse">
+                            <li>
+                                <img src="./src/assets/partner-1.png" alt="partner-1" height="auto"/>
+                            </li>
+                            <li>
+                                <img src="./src/assets/partner-2.png" alt="partner-2" height="auto"/>
+                            </li>
+                            <li>
+                                <img src="./src/assets/partner-3.png" alt="partner-3" height="auto"/>
+                            </li>
+                            <li>
+                                <img src="./src/assets/partner-4.png" alt="partner-4" height="auto"/>
+                            </li>
+                            <li>
+                                <img src="./src/assets/partner-5.png" alt="partner-5" height="auto"/>
+                            </li>
+                        </ul>                
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="relative font-inter antialiased">
+            <div class="w-full mx-auto">
+                <div class="text-center">
+                    <div
+                        x-data="{}"
+                        x-init="$nextTick(() => {
+                            let ul = $refs.logos;
+                            ul.insertAdjacentHTML('afterend', ul.outerHTML);
+                            ul.nextSibling.setAttribute('aria-hidden', 'true');
+                        })"
+                        class="w-full inline-flex flex-nowrap overflow-hidden bg-[var(--secondary-color)]"
+                    >
+                        <ul x-ref="logos" class="flex items-center justify-center md:justify-start [&_li]:mx-20 [&_img]:max-w-none animate-infinite-scroll">
+                            <li>
+                                <img src="./src/assets/partner-1.png" alt="partner-1" height="auto"/>
+                            </li>
+                            <li>
+                                <img src="./src/assets/partner-2.png" alt="partner-2" height="auto"/>
+                            </li>
+                            <li>
+                                <img src="./src/assets/partner-3.png" alt="partner-3" height="auto"/>
+                            </li>
+                            <li>
+                                <img src="./src/assets/partner-4.png" alt="partner-4" height="auto"/>
+                            </li>
+                            <li>
+                                <img src="./src/assets/partner-5.png" alt="partner-5" height="auto"/>
+                            </li>
+                        </ul>                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="h-28"></div>
+
+    <footer class="bg-white" aria-labelledby="footer-heading">
+    <h2 id="footer-heading" class="sr-only">Footer</h2>
+    <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
+      <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+        <div class="space-y-8">
+          <h4 class="text-2xl font-bold">PT Sumitomo Forestry Indonesia</h4>
+          <p class="text-sm leading-6 text-gray-600"> Summitmas II Lt.8, Jl.Jend.Sudirman Kav61-62, Jakarta 12910 </p>
+        </div>
+
+        <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+          <div class="md:grid md:grid-cols-2 md:gap-8">
+            <div>
+              <h3 class="text-sm font-semibold leading-6 text-gray-900">Recuruitments</h3>
+              <ul role="list" class="mt-6 space-y-4">
+                <li>
+                    <a href="http://www.jobstreet.co.id" class="text-sm leading-6 text-gray-600 hover:underline hover:text-[var(--primary-color)]">Jobstreet Sumitomo Forestry Indonesia </a>
+                </li>
+              </ul>
+            </div>
+            <div class="mt-10 md:mt-0">
+                <h3 class="text-sm font-semibold leading-6 text-gray-900">Link</h3>
+                <ul role="list" class="mt-6 space-y-4">
+                    <li>
+                        <a href="http://www.jobstreet.co.id" class="text-sm leading-6 text-gray-600 hover:underline hover:text-[var(--primary-color)]">Sumitomo Forestry Co.,Ltd.</a>
+                    </li>
+                </ul>
+            </div>
+          </div>
+          <div class="md:grid md:grid-cols-2 md:gap-8">
+            <div>
+              <h3 class="text-sm font-semibold leading-6 text-gray-900">Menu</h3>
+              <ul role="list" class="mt-6 space-y-4">
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:underline hover:text-[var(--primary-color)]">Home</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:underline hover:text-[var(--primary-color)]">About</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:underline hover:text-[var(--primary-color)]">Trading</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:underline hover:text-[var(--primary-color)]">Property</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:underline hover:text-[var(--primary-color)]">Partners</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
+        <p class="text-xs leading-5 text-gray-500">&copy; 2025 Sumitomo Forestry Indonesia, Inc. All rights reserved.</p>
       </div>
     </div>
-  </section> 
+    </footer>
+
+    <script>
+        // Alpine.js click functionality for the menu
+        document.addEventListener('DOMContentLoaded', function () {
+          let menuIcon = document.querySelector('.menu-icon');
+          let navbar = document.querySelector('.navbar');
+          menuIcon.addEventListener('click', function () {
+            navbar.classList.toggle('active');
+          });
+        });
+    </script>
 </body>
 </html>
