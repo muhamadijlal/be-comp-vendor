@@ -15,26 +15,27 @@
 <body class="bg-[var(--primary-color)]">
     <header x-data="{ open: false }" class="navbar">
         <div class="flex justify-between items-center">
-          <!-- Logo/Brand -->
-          <a href="#" class="text-white font-bold text-2xl">Forestry</a>
+            <!-- Logo/Brand -->
+            <a href="#" class="text-white font-bold text-2xl">Forestry</a>
     
-          <!-- Menu Icon for mobile -->
-          <div @click="open = !open" class="menu-icon">
-            <i class='bx bx-menu'></i>
-          </div>
+            <!-- Menu Icon for mobile -->
+            <div @click="open = !open" class="menu-icon">
+                <i class='bx bx-menu'></i>
+            </div>
     
-          <!-- Menu Links -->
-          <ul :class="{'block': open, 'hidden': !open}" class="md:flex gap-6">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#trading">Trading</a></li>
-            <li><a href="#property">Property</a></li>
-            <li><a href="#partners">Partners</a></li>
-          </ul>
+            <!-- Menu Links -->
+            <ul :class="{'block': open, 'hidden': !open}" class="md:flex gap-6">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#trading">Trading</a></li>
+                <li><a href="#property">Property</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#partners">Partners</a></li>
+            </ul>
         </div>
     </header>
 
-    <section class="relative bg-red-100 overflow-hidden mx-5 h-screen sm:mx-none" id="home">
+    <section class="relative bg-red-100 overflow-hidden h-screen" id="home">
         <video muted loop autoplay class="absolute inset-0 w-full h-screen object-cover">
             <source src="./src/assets/herovid.mp4" type="video/mp4" />
             Your browser does not support the video tag.
@@ -112,65 +113,81 @@
         </div>
 
         <div class="grid grid-cols-2 md:grid-cols-3 md:grid-rows-3 grid-rows-2 gap-4">
-        <a href="#" class="bg-red-100 aspect-[4/6] rounded-lg row-span-2 bg-cover overflow-hidden relative group" style="background-image: url('./src/assets/plywood.jpg');">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div class="absolute bottom-0 left-0 right-0 px-4 py-2 text-white font-bold opacity-0 transform translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 group-hover:underline transition-all duration-500">
-            Plywood
-            <i class='bx bx-arrow-back rotate-140'></i>
-            </div>
-        </a>
-        
-        <a href="#" class="bg-red-100 rounded-lg bg-cover overflow-hidden relative group" style="background-image: url('./src/assets/mfc.jpg');">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div class="absolute bottom-0 left-0 right-0 px-4 py-2 text-white font-bold opacity-0 transform translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 group-hover:underline transition-all duration-500">
-            Mfc
-            <i class='bx bx-arrow-back rotate-140'></i>
-            </div>
-        </a>
-        
-        <a href="#" class="bg-red-100 aspect-[4/4] rounded-lg bg-cover overflow-hidden relative group" style="background-image: url('./src/assets/gypsum.jpg');">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div class="absolute bottom-0 left-0 right-0 px-4 py-2 text-white font-bold opacity-0 transform translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 group-hover:underline transition-all duration-500">
-            Gypsum
-            <i class='bx bx-arrow-back rotate-140'></i>
-            </div>
-        </a>
-        
-        <a href="#" class="bg-red-100 aspect-[4/6] rounded-lg row-span-3 col-start-2 row-start-2 bg-cover overflow-hidden relative group" style="background-image: url('./src/assets/wall.jpg');">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div class="absolute bottom-0 left-0 right-0 px-4 py-2 text-white font-bold opacity-0 transform translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 group-hover:underline transition-all duration-500">
-            Wall
-            <i class='bx bx-arrow-back rotate-140'></i>
-            </div>
-        </a>
-        
-        <a href="#" class="bg-red-100 aspect-[4/3] rounded-lg row-span-2 col-start-1 row-start-3 bg-cover overflow-hidden relative group" style="background-image: url('./src/assets/gypsum.jpg');">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div class="absolute bottom-0 left-0 right-0 px-4 py-2 text-white font-bold opacity-0 transform translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 group-hover:underline transition-all duration-500">
-            Gypsum
-            <i class='bx bx-arrow-back rotate-140'></i>
-            </div>
-        </a>
-        
-        <a href="#" class="bg-red-100 aspect-[4/3] rounded-lg row-span-2 col-start-1 row-start-3 bg-cover overflow-hidden relative group" style="background-image: url('./src/assets/sample2.jpg');">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div class="absolute bottom-0 left-0 right-0 px-4 py-2 text-white font-bold opacity-0 transform translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 group-hover:underline transition-all duration-500">
-            Sample
-            <i class='bx bx-arrow-back rotate-140'></i>
-            </div>
-        </a>      
-        
-        <div class="w-full text-end flex justify-end items-end">
-            <a href="#" class="px-4 text-end py-2 rounded-full border border-[var(--primary-color)] text-[var(--primary-color)] hover:text-[var(--light-color)] hover:bg-[var(--primary-color)] text-sm font-bold lg:text-xl">Show more
+            <a href="#" class="aspect-[4/6] rounded-lg row-span-2 bg-cover overflow-hidden relative group" style="background-image: url('./src/assets/plywood.jpg');">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="absolute bottom-0 left-0 right-0 px-4 py-2 text-white font-bold opacity-0 transform translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 group-hover:underline transition-all duration-500">
+                Plywood
                 <i class='bx bx-arrow-back rotate-140'></i>
+                </div>
             </a>
-        </div>
+            
+            <a href="#" class="rounded-lg bg-cover overflow-hidden relative group" style="background-image: url('./src/assets/mfc.jpg');">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="absolute bottom-0 left-0 right-0 px-4 py-2 text-white font-bold opacity-0 transform translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 group-hover:underline transition-all duration-500">
+                Mfc
+                <i class='bx bx-arrow-back rotate-140'></i>
+                </div>
+            </a>
+            
+            <a href="#" class="aspect-[4/4] rounded-lg bg-cover overflow-hidden relative group" style="background-image: url('./src/assets/gypsum.jpg');">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="absolute bottom-0 left-0 right-0 px-4 py-2 text-white font-bold opacity-0 transform translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 group-hover:underline transition-all duration-500">
+                Gypsum
+                <i class='bx bx-arrow-back rotate-140'></i>
+                </div>
+            </a>
+            
+            <a href="#" class="aspect-[4/6] rounded-lg row-span-3 col-start-2 row-start-2 bg-cover overflow-hidden relative group" style="background-image: url('./src/assets/wall.jpg');">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="absolute bottom-0 left-0 right-0 px-4 py-2 text-white font-bold opacity-0 transform translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 group-hover:underline transition-all duration-500">
+                Wall
+                <i class='bx bx-arrow-back rotate-140'></i>
+                </div>
+            </a>
+            
+            <a href="#" class="rounded-lg bg-cover overflow-hidden relative group" style="background-image: url('./src/assets/mfc.jpg');">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="absolute bottom-0 left-0 right-0 px-4 py-2 text-white font-bold opacity-0 transform translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 group-hover:underline transition-all duration-500">
+                Mfc
+                <i class='bx bx-arrow-back rotate-140'></i>
+                </div>
+            </a>
+            
+            <a href="#" class="aspect-[4/4] rounded-lg bg-cover overflow-hidden relative group" style="background-image: url('./src/assets/gypsum.jpg');">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="absolute bottom-0 left-0 right-0 px-4 py-2 text-white font-bold opacity-0 transform translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 group-hover:underline transition-all duration-500">
+                Gypsum
+                <i class='bx bx-arrow-back rotate-140'></i>
+                </div>
+            </a>
+            
+            <a href="#" class="aspect-[4/6] rounded-lg row-span-3 col-start-2 row-start-2 bg-cover overflow-hidden relative group" style="background-image: url('./src/assets/wall.jpg');">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="absolute bottom-0 left-0 right-0 px-4 py-2 text-white font-bold opacity-0 transform translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 group-hover:underline transition-all duration-500">
+                Wall
+                <i class='bx bx-arrow-back rotate-140'></i>
+                </div>
+            </a>
+            
+            <a href="#" class="aspect-[4/3] rounded-lg row-span-2 col-start-1 row-start-3 bg-cover overflow-hidden relative group" style="background-image: url('./src/assets/gypsum.jpg');">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="absolute bottom-0 left-0 right-0 px-4 py-2 text-white font-bold opacity-0 transform translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 group-hover:underline transition-all duration-500">
+                Gypsum
+                <i class='bx bx-arrow-back rotate-140'></i>
+                </div>
+            </a>
+            
+            <div class="w-full text-end flex justify-end items-end">
+                <a href="#" class="px-4 text-end py-2 rounded-full border border-[var(--primary-color)] text-[var(--primary-color)] hover:text-[var(--light-color)] hover:bg-[var(--primary-color)] text-sm font-bold lg:text-xl">Show more
+                    <i class='bx bx-arrow-back rotate-140'></i>
+                </a>
+            </div>
         </div>
     </section>
 
     <div class="h-28" id="property"></div>
 
-    <section class="px-5 container mx-auto" id="property">
+    <section class="px-5 container mx-auto">
         <div class="mb-10">
             <div class="flex items-center gap-4">
                 <h4 class="text-4xl lg:text-7xl md:text-6xl font-semibold text-[var(--light-color)]">
@@ -183,27 +200,326 @@
             </h4>
         </div>
         
-        <div class="grid grid-cols-2 grid-rows-12 gap-4">
-            <div class="row-span-2 bg-white rounded-lg aspect-[4/6] md:aspect-video bg-cover" style="background-image: url('./src/assets/wall.jpg');"></div>
-                <div class="row-span-2 col-start-2 row-start-2 text-white space-y-3">
-                <h4 class="line-clamp-1 text-xl md:text-3xl font-bold lg:text-4xl">Lorem ipsum dolor</h4>
-                <p class="text-sm md:text-lg lg:text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, dolorem. Veniam repellendus eaque accusantium, dolorum distinctio eius, fugit animi ullam accusamus, in eligendi. Qui, eaque?</p>
+        <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4">
+            <div class="flex flex-col sm:flex-row lg:flex-col gap-5 xl:flex-row bg-white p-2 rounded-xl">
+                <img class="aspect-video sm:h-auto sm:w-60 lg:w-auto lg:h-72 xl:w-60 rounded-lg" src="./src/assets/wall.jpg" alt="wall.jpg">
+
+                <div class="flex flex-col sm:gap-7 gap-4 pt-5 pb-2 pe-2">
+                    <div class="flex flex-col gap-3 px-2">
+                        <h4 class="line-clamp-1 text-[var(--primary-color)] text-xl md:text-2xl lg:text-xl font-bold">Lorem ipsum dolor</h4>
+                        <p class="text-md text-justify md:text-lg lg:text-md line-clamp-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, dolorem. Veniam repellendus eaque accusantium, dolorum distinctio eius, fugit animi ullam accusamus, in eligendi. Qui, eaque?</p>
+                    </div>
+    
+                    <div class="w-full text-end flex justify-end items-end">
+                        <a href="#" class="px-4 text-end py-2 rounded-lg border border-[var(--primary-color)] text-[var(--primary-color)] hover:text-[var(--light-color)] hover:bg-[var(--primary-color)] text-sm font-bold md:text-lg">Show more
+                            <i class="bx bx-arrow-back rotate-140"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="row-span-2 row-start-4 text-white space-y-3">
-                <h4 class="line-clamp-1 text-xl md:text-3xl font-bold lg:text-4xl">Lorem ipsum dolor</h4>
-                <p class="text-sm text-right md:text-lg lg:text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, dolorem. Veniam repellendus eaque accusantium, dolorum distinctio eius, fugit animi ullam accusamus, in eligendi. Qui, eaque?</p>
+
+            <div class="flex flex-col sm:flex-row-reverse lg:flex-col gap-5 xl:flex-row bg-white p-2 rounded-xl">
+                <img class="aspect-video sm:h-auto sm:w-60 lg:w-auto lg:h-72 xl:w-60 rounded-lg" src="./src/assets/wall.jpg" alt="wall.jpg">
+
+                <div class="flex flex-col sm:gap-7 gap-4 pt-5 pb-2 pe-2">
+                    <div class="flex flex-col gap-3 px-2">
+                        <h4 class="line-clamp-1 text-[var(--primary-color)] text-xl md:text-2xl lg:text-xl font-bold">Lorem ipsum dolor</h4>
+                        <p class="text-md text-justify md:text-lg lg:text-md line-clamp-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, dolorem. Veniam repellendus eaque accusantium, dolorum distinctio eius, fugit animi ullam accusamus, in eligendi. Qui, eaque?</p>
+                    </div>
+    
+                    <div class="w-full text-end flex justify-end items-end">
+                        <a href="#" class="px-4 text-end py-2 rounded-lg border border-[var(--primary-color)] text-[var(--primary-color)] hover:text-[var(--light-color)] hover:bg-[var(--primary-color)] text-sm font-bold md:text-lg">Show more
+                            <i class="bx bx-arrow-back rotate-140"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="row-span-2 col-start-2 row-start-5 bg-white rounded-lg aspect-[4/6] md:aspect-video bg-cover" style="background-image: url('./src/assets/wall.jpg');"></div>
-            <div class="row-span-2 row-start-7 bg-white rounded-lg aspect-[4/6] md:aspect-video bg-cover" style="background-image: url('./src/assets/wall.jpg');"></div>
-            <div class="row-span-2 col-start-2 row-start-8 text-white space-y-3">
-                <h4 class="line-clamp-1 text-xl font-bold md:text-3xl lg:text-4xl">Lorem ipsum dolor</h4>
-                <p class="text-sm md-text-lg lg:text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, dolorem. Veniam repellendus eaque accusantium, dolorum distinctio eius, fugit animi ullam accusamus, in eligendi. Qui, eaque?</p>
+
+            <div class="flex flex-col sm:flex-row lg:flex-col gap-5 xl:flex-row bg-white p-2 rounded-xl">
+                <img class="aspect-video sm:h-auto sm:w-60 lg:w-auto lg:h-72 xl:w-60 rounded-lg" src="./src/assets/wall.jpg" alt="wall.jpg">
+
+                <div class="flex flex-col sm:gap-7 gap-4 pt-5 pb-2 pe-2">
+                    <div class="flex flex-col gap-3 px-2">
+                        <h4 class="line-clamp-1 text-[var(--primary-color)] text-xl md:text-2xl lg:text-xl font-bold">Lorem ipsum dolor</h4>
+                        <p class="text-md text-justify md:text-lg lg:text-md line-clamp-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, dolorem. Veniam repellendus eaque accusantium, dolorum distinctio eius, fugit animi ullam accusamus, in eligendi. Qui, eaque?</p>
+                    </div>
+    
+                    <div class="w-full text-end flex justify-end items-end">
+                        <a href="#" class="px-4 text-end py-2 rounded-lg border border-[var(--primary-color)] text-[var(--primary-color)] hover:text-[var(--light-color)] hover:bg-[var(--primary-color)] text-sm font-bold md:text-lg">Show more
+                            <i class="bx bx-arrow-back rotate-140"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="row-span-2 row-start-10 text-white space-y-3">
-                <h4 class="line-clamp-1 text-xl font-bold md:text-3xl lg:text-4xl">Lorem ipsum dolor</h4>
-                <p class="text-sm text-right md:text-lg lg:text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, dolorem. Veniam repellendus eaque accusantium, dolorum distinctio eius, fugit animi ullam accusamus, in eligendi. Qui, eaque?</p>
+
+            <div class="flex flex-col sm:flex-row-reverse lg:flex-col gap-5 xl:flex-row bg-white p-2 rounded-xl">
+                <img class="aspect-video sm:h-auto sm:w-60 lg:w-auto lg:h-72 xl:w-60 rounded-lg" src="./src/assets/wall.jpg" alt="wall.jpg">
+
+                <div class="flex flex-col sm:gap-7 gap-4 pt-5 pb-2 pe-2">
+                    <div class="flex flex-col gap-3 px-2">
+                        <h4 class="line-clamp-1 text-[var(--primary-color)] text-xl md:text-2xl lg:text-xl font-bold">Lorem ipsum dolor</h4>
+                        <p class="text-md text-justify md:text-lg lg:text-md line-clamp-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, dolorem. Veniam repellendus eaque accusantium, dolorum distinctio eius, fugit animi ullam accusamus, in eligendi. Qui, eaque?</p>
+                    </div>
+    
+                    <div class="w-full text-end flex justify-end items-end">
+                        <a href="#" class="px-4 text-end py-2 rounded-lg border border-[var(--primary-color)] text-[var(--primary-color)] hover:text-[var(--light-color)] hover:bg-[var(--primary-color)] text-sm font-bold md:text-lg">Show more
+                            <i class="bx bx-arrow-back rotate-140"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="row-span-2 col-start-2 row-start-11 bg-white rounded-lg aspect-[4/6] md:aspect-video bg-cover" style="background-image: url('./src/assets/wall.jpg');"></div>
+
+            <div class="flex flex-col sm:flex-row lg:flex-col gap-5 xl:flex-row bg-white p-2 rounded-xl">
+                <img class="aspect-video sm:h-auto sm:w-60 lg:w-auto lg:h-72 xl:w-60 rounded-lg" src="./src/assets/wall.jpg" alt="wall.jpg">
+
+                <div class="flex flex-col sm:gap-7 gap-4 pt-5 pb-2 pe-2">
+                    <div class="flex flex-col gap-3 px-2">
+                        <h4 class="line-clamp-1 text-[var(--primary-color)] text-xl md:text-2xl lg:text-xl font-bold">Lorem ipsum dolor</h4>
+                        <p class="text-md text-justify md:text-lg lg:text-md line-clamp-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, dolorem. Veniam repellendus eaque accusantium, dolorum distinctio eius, fugit animi ullam accusamus, in eligendi. Qui, eaque?</p>
+                    </div>
+    
+                    <div class="w-full text-end flex justify-end items-end">
+                        <a href="#" class="px-4 text-end py-2 rounded-lg border border-[var(--primary-color)] text-[var(--primary-color)] hover:text-[var(--light-color)] hover:bg-[var(--primary-color)] text-sm font-bold md:text-lg">Show more
+                            <i class="bx bx-arrow-back rotate-140"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="h-28" id="news"></div>
+
+    <section class="px-5 container mx-auto">
+        <div class="mb-10">
+            <div class="flex items-center gap-4">
+                <h4 class="text-4xl lg:text-7xl md:text-6xl font-semibold text-[var(--light-color)]">
+                News
+                </h4>
+                <hr class="w-full border border-[var(--light-color)]"/>
+                <a href="#" class="w-[30%] md:w-[25%] lg:w-[15%] xt-lg font-semibold text-[var(--light-color)] group hover:underline">
+                    All News
+                    <i class='bx bx-arrow-back rotate-140'></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- component -->
+        <div class="pt-20 pb-10 lg:pt-[120px] lg:pb-20">
+            <div class="container mx-auto">
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="w-full mb-10">
+                        <div class="mx-auto mb-10">
+                            <div class="mb-8 overflow-hidden rounded-lg">
+                                <img
+                                    src="https://cdn.tailgrids.com/2.0/image/application/images/blogs/blog-01/image-01.jpg"
+                                    alt="image"
+                                    class="w-full"
+                                />
+                            </div>
+                        </div>
+                        <div>
+                            <span
+                                class="bg-primary mb-5 inline-block rounded py-1 text-center text-xs font-semibold leading-loose text-[var(--light-color)]"
+                            >
+                                Dec 22, 2023
+                            </span>
+                            <h3>
+                                <a
+                                href="javascript:void(0)"
+                                class="text-[var(--light-color)] hover:underline group hover:text-primary mb-4 inline-block text-xl font-semibold sm:text-2xl lg:text-xl xl:text-2xl line-clamp-2"
+                                >
+                                Meet AutoManage, the best AI management tools
+                                    <i class='bx bx-arrow-back rotate-140 opacity-0 group-hover:opacity-100'></i>
+                                </a>
+                            </h3>
+                            <p class="text-base text-[var(--light-color)] text-justify line-clamp-7">
+                               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia beatae dolore officiis magni hic dolorem quod. Error enim aperiam porro illo quae ratione repellat repellendus minima. Animi repellat quia nam eligendi. Facere voluptatibus cumque obcaecati laudantium modi maxime iusto nihil, deleniti nam, eveniet ipsa. Deleniti, explicabo vitae? Ad, blanditiis assumenda?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-full">
+                        <div class="mx-auto mb-10">
+                            <div class="mb-8 overflow-hidden rounded-lg">
+                                <img
+                                    src="https://cdn.tailgrids.com/2.0/image/application/images/blogs/blog-01/image-01.jpg"
+                                    alt="image"
+                                    class="w-full"
+                                />
+                            </div>
+                        </div>
+                        <div>
+                            <span
+                                class="bg-primary mb-5 inline-block rounded py-1 text-center text-xs font-semibold leading-loose text-[var(--light-color)]"
+                            >
+                                Dec 22, 2023
+                            </span>
+                            <h3>
+                                <a
+                                href="javascript:void(0)"
+                                class="text-[var(--light-color)] hover:underline group hover:text-primary mb-4 inline-block text-xl font-semibold sm:text-2xl lg:text-xl xl:text-2xl line-clamp-2"
+                                >
+                                Meet AutoManage, the best AI management tools
+                                    <i class='bx bx-arrow-back rotate-140 opacity-0 group-hover:opacity-100'></i>
+                                </a>
+                            </h3>
+                            <p class="text-base text-[var(--light-color)] text-justify line-clamp-7">
+                               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia beatae dolore officiis magni hic dolorem quod. Error enim aperiam porro illo quae ratione repellat repellendus minima. Animi repellat quia nam eligendi. Facere voluptatibus cumque obcaecati laudantium modi maxime iusto nihil, deleniti nam, eveniet ipsa. Deleniti, explicabo vitae? Ad, blanditiis assumenda?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-full">
+                        <div class="mx-auto mb-10">
+                            <div class="mb-8 overflow-hidden rounded-lg">
+                                <img
+                                    src="https://cdn.tailgrids.com/2.0/image/application/images/blogs/blog-01/image-01.jpg"
+                                    alt="image"
+                                    class="w-full"
+                                />
+                            </div>
+                        </div>
+                        <div>
+                            <span
+                                class="bg-primary mb-5 inline-block rounded py-1 text-center text-xs font-semibold leading-loose text-[var(--light-color)]"
+                            >
+                                Dec 22, 2023
+                            </span>
+                            <h3>
+                                <a
+                                href="javascript:void(0)"
+                                class="text-[var(--light-color)] hover:underline group hover:text-primary mb-4 inline-block text-xl font-semibold sm:text-2xl lg:text-xl xl:text-2xl line-clamp-2"
+                                >
+                                Meet AutoManage, the best AI management tools
+                                    <i class='bx bx-arrow-back rotate-140 opacity-0 group-hover:opacity-100'></i>
+                                </a>
+                            </h3>
+                            <p class="text-base text-[var(--light-color)] text-justify line-clamp-7">
+                               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia beatae dolore officiis magni hic dolorem quod. Error enim aperiam porro illo quae ratione repellat repellendus minima. Animi repellat quia nam eligendi. Facere voluptatibus cumque obcaecati laudantium modi maxime iusto nihil, deleniti nam, eveniet ipsa. Deleniti, explicabo vitae? Ad, blanditiis assumenda?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-full">
+                        <div class="mx-auto mb-10">
+                            <div class="mb-8 overflow-hidden rounded-lg">
+                                <img
+                                    src="https://cdn.tailgrids.com/2.0/image/application/images/blogs/blog-01/image-01.jpg"
+                                    alt="image"
+                                    class="w-full"
+                                />
+                            </div>
+                        </div>
+                        <div>
+                            <span
+                                class="bg-primary mb-5 inline-block rounded py-1 text-center text-xs font-semibold leading-loose text-[var(--light-color)]"
+                            >
+                                Dec 22, 2023
+                            </span>
+                            <h3>
+                                <a
+                                href="javascript:void(0)"
+                                class="text-[var(--light-color)] hover:underline group hover:text-primary mb-4 inline-block text-xl font-semibold sm:text-2xl lg:text-xl xl:text-2xl line-clamp-2"
+                                >
+                                Meet AutoManage, the best AI management tools
+                                    <i class='bx bx-arrow-back rotate-140 opacity-0 group-hover:opacity-100'></i>
+                                </a>
+                            </h3>
+                            <p class="text-base text-[var(--light-color)] text-justify line-clamp-7">
+                               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia beatae dolore officiis magni hic dolorem quod. Error enim aperiam porro illo quae ratione repellat repellendus minima. Animi repellat quia nam eligendi. Facere voluptatibus cumque obcaecati laudantium modi maxime iusto nihil, deleniti nam, eveniet ipsa. Deleniti, explicabo vitae? Ad, blanditiis assumenda?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-full">
+                        <div class="mx-auto mb-10">
+                            <div class="mb-8 overflow-hidden rounded-lg">
+                                <img
+                                    src="https://cdn.tailgrids.com/2.0/image/application/images/blogs/blog-01/image-01.jpg"
+                                    alt="image"
+                                    class="w-full"
+                                />
+                            </div>
+                        </div>
+                        <div>
+                            <span
+                                class="bg-primary mb-5 inline-block rounded py-1 text-center text-xs font-semibold leading-loose text-[var(--light-color)]"
+                            >
+                                Dec 22, 2023
+                            </span>
+                            <h3>
+                                <a
+                                href="javascript:void(0)"
+                                class="text-[var(--light-color)] hover:underline group hover:text-primary mb-4 inline-block text-xl font-semibold sm:text-2xl lg:text-xl xl:text-2xl line-clamp-2"
+                                >
+                                Meet AutoManage, the best AI management tools
+                                    <i class='bx bx-arrow-back rotate-140 opacity-0 group-hover:opacity-100'></i>
+                                </a>
+                            </h3>
+                            <p class="text-base text-[var(--light-color)] text-justify line-clamp-7">
+                               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia beatae dolore officiis magni hic dolorem quod. Error enim aperiam porro illo quae ratione repellat repellendus minima. Animi repellat quia nam eligendi. Facere voluptatibus cumque obcaecati laudantium modi maxime iusto nihil, deleniti nam, eveniet ipsa. Deleniti, explicabo vitae? Ad, blanditiis assumenda?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-full">
+                        <div class="mx-auto mb-10">
+                            <div class="mb-8 overflow-hidden rounded-lg">
+                                <img
+                                    src="https://cdn.tailgrids.com/2.0/image/application/images/blogs/blog-01/image-01.jpg"
+                                    alt="image"
+                                    class="w-full"
+                                />
+                            </div>
+                        </div>
+                        <div>
+                            <span
+                                class="bg-primary mb-5 inline-block rounded py-1 text-center text-xs font-semibold leading-loose text-[var(--light-color)]"
+                            >
+                                Dec 22, 2023
+                            </span>
+                            <h3>
+                                <a
+                                href="javascript:void(0)"
+                                class="text-[var(--light-color)] hover:underline group hover:text-primary mb-4 inline-block text-xl font-semibold sm:text-2xl lg:text-xl xl:text-2xl line-clamp-2"
+                                >
+                                Meet AutoManage, the best AI management tools
+                                    <i class='bx bx-arrow-back rotate-140 opacity-0 group-hover:opacity-100'></i>
+                                </a>
+                            </h3>
+                            <p class="text-base text-[var(--light-color)] text-justify line-clamp-7">
+                               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia beatae dolore officiis magni hic dolorem quod. Error enim aperiam porro illo quae ratione repellat repellendus minima. Animi repellat quia nam eligendi. Facere voluptatibus cumque obcaecati laudantium modi maxime iusto nihil, deleniti nam, eveniet ipsa. Deleniti, explicabo vitae? Ad, blanditiis assumenda?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-full">
+                        <div class="mx-auto mb-10">
+                            <div class="mb-8 overflow-hidden rounded-lg">
+                                <img
+                                    src="https://cdn.tailgrids.com/2.0/image/application/images/blogs/blog-01/image-01.jpg"
+                                    alt="image"
+                                    class="w-full"
+                                />
+                            </div>
+                        </div>
+                        <div>
+                            <span
+                                class="bg-primary mb-5 inline-block rounded py-1 text-center text-xs font-semibold leading-loose text-[var(--light-color)]"
+                            >
+                                Dec 22, 2023
+                            </span>
+                            <h3>
+                                <a
+                                href="javascript:void(0)"
+                                class="text-[var(--light-color)] hover:underline group hover:text-primary mb-4 inline-block text-xl font-semibold sm:text-2xl lg:text-xl xl:text-2xl line-clamp-2"
+                                >
+                                Meet AutoManage, the best AI management tools
+                                    <i class='bx bx-arrow-back rotate-140 opacity-0 group-hover:opacity-100'></i>
+                                </a>
+                            </h3>
+                            <p class="text-base text-[var(--light-color)] text-justify line-clamp-7">
+                               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia beatae dolore officiis magni hic dolorem quod. Error enim aperiam porro illo quae ratione repellat repellendus minima. Animi repellat quia nam eligendi. Facere voluptatibus cumque obcaecati laudantium modi maxime iusto nihil, deleniti nam, eveniet ipsa. Deleniti, explicabo vitae? Ad, blanditiis assumenda?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -348,19 +664,22 @@
               <h3 class="text-sm font-semibold leading-6 text-gray-900">Menu</h3>
               <ul role="list" class="mt-6 space-y-4">
                 <li>
-                  <a href="#" class="text-sm leading-6 text-gray-600 hover:underline hover:text-[var(--primary-color)]">Home</a>
+                  <a href="#home" class="text-sm leading-6 text-gray-600 hover:underline hover:text-[var(--primary-color)]">Home</a>
                 </li>
                 <li>
-                  <a href="#" class="text-sm leading-6 text-gray-600 hover:underline hover:text-[var(--primary-color)]">About</a>
+                  <a href="#about" class="text-sm leading-6 text-gray-600 hover:underline hover:text-[var(--primary-color)]">About</a>
                 </li>
                 <li>
-                  <a href="#" class="text-sm leading-6 text-gray-600 hover:underline hover:text-[var(--primary-color)]">Trading</a>
+                  <a href="#trading" class="text-sm leading-6 text-gray-600 hover:underline hover:text-[var(--primary-color)]">Trading</a>
                 </li>
                 <li>
-                  <a href="#" class="text-sm leading-6 text-gray-600 hover:underline hover:text-[var(--primary-color)]">Property</a>
+                  <a href="#property" class="text-sm leading-6 text-gray-600 hover:underline hover:text-[var(--primary-color)]">Property</a>
                 </li>
                 <li>
-                  <a href="#" class="text-sm leading-6 text-gray-600 hover:underline hover:text-[var(--primary-color)]">Partners</a>
+                  <a href="#news" class="text-sm leading-6 text-gray-600 hover:underline hover:text-[var(--primary-color)]">News</a>
+                </li>
+                <li>
+                  <a href="#partners" class="text-sm leading-6 text-gray-600 hover:underline hover:text-[var(--primary-color)]">Partners</a>
                 </li>
               </ul>
             </div>
